@@ -32,7 +32,7 @@ def attributes(data, name)
         spec << spec_key.to_s
       end
     end
-    pigeon[att_key] =  spec
+    pigeon[att_key] = spec
   end
   hash[name] = pigeon
   hash
