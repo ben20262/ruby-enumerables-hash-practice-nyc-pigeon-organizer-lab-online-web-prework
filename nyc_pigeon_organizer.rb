@@ -9,7 +9,7 @@ def nyc_pigeon_organizer(data)
         if !pigeon_bois.has_key?(name)
           magic.each do |key|
             pigeon_bois[name] = {key => []}
-
+            
         end
       end
     end
