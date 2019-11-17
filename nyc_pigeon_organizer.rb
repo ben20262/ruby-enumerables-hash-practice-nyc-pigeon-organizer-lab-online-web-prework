@@ -1,25 +1,15 @@
 def nyc_pigeon_organizer(data)
   pigeon_bois = {}
   names = []
-  keys1 = []
-  keys2 = []
-  keys1 = data.keys
-  x = 0
-  y = 0
   data.each do |att|
-    keys2 << att.keys
     att.each do |spec|
-      keys2[x][y].to_s
       names.concat(spec.values)
     end
   end
-  names = names.uniq
-  this = [keys1, keys2].to_h
-  names.each do |name|
-    pigeon_bois[name] = this
+  names.uniq!
+  names.each do |bird|
+    pigeon_bois[name] = attributes(data, bird)
   end
-  puts pigeon_bois
-  pigeon_bois
 end
 
 def attributes(data, name)
@@ -34,6 +24,5 @@ def attributes(data, name)
     end
     pigeon[att_key] = spec
   end
-  hash[name] = pigeon
-  hash
+  pigeon
 end
