@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
   end
   names.uniq!
   names.each do |bird|
-    pigeon_bois[name] = attributes(data, bird)
+    pigeon_bois[bird] = attributes(data, bird)
   end
 end
 
