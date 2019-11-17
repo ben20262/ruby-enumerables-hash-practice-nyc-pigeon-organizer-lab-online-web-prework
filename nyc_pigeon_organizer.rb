@@ -3,7 +3,7 @@ def nyc_pigeon_organizer(data)
   names = []
   data.each_value do |att|
     att.each_value do |spec_value|
-      names = names + spec_value
+      names.concat(spec_value)
     end
   end
   names.uniq!
