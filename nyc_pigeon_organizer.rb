@@ -15,6 +15,8 @@ def nyc_pigeon_organizer(data)
   end
   names = names.uniq
   names.each do |name|
-    pigeon_bois[name] = {}
+    pigeon_bois[name] = {[keys1, keys2].to_h}
   end
+  puts pigeon_bois
+  pigeon_bois
 end
