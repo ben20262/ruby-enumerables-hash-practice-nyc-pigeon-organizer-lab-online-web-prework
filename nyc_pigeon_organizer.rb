@@ -21,3 +21,18 @@ def nyc_pigeon_organizer(data)
   puts pigeon_bois
   pigeon_bois
 end
+
+def attributes(data, name)
+  hash = {}
+  data.each_pair do |att_key, att_value|
+    spec = []
+    att_value.each_pair do |spec_key, spec_value|
+      if spec_value.includes?(name)
+        spec << spec_key.to_s
+      end
+    end
+    hash[name] = {
+      att_key => spec
+    }
+  end
+end
