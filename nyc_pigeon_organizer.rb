@@ -35,4 +35,5 @@ def attributes(data, name)
       att_key => spec
     }
   end
+  hash
 end
