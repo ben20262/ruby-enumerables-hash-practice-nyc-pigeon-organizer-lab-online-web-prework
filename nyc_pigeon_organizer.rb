@@ -1,7 +1,7 @@
 def nyc_pigeon_organizer(data)
   pigeon_bois = {}
   names = []
-  data.each do |att|
+  data.each_value do |att|
     att.each_value do |spec_value|
       names.concat(spec_value)
     end
