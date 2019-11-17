@@ -10,5 +10,5 @@ def nyc_pigeon_organizer(data)
       names.concat(spec.values)
     end
   end
-  
+
 end
