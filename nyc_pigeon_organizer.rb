@@ -27,7 +27,7 @@ def attributes(data, name)
   data.each_pair do |att_key, att_value|
     spec = []
     att_value.each_pair do |spec_key, spec_value|
-      if spec_value.includes?(name)
+      if spec_value.include?(name)
         spec << spec_key.to_s
       end
     end
