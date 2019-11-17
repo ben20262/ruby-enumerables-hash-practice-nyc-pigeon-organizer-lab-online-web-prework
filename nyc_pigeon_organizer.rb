@@ -24,6 +24,7 @@ end
 
 def attributes(data, name)
   hash = {}
+  pigeon = {}
   data.each_pair do |att_key, att_value|
     spec = []
     att_value.each_pair do |spec_key, spec_value|
@@ -31,9 +32,8 @@ def attributes(data, name)
         spec << spec_key.to_s
       end
     end
-    hash[name] = {
-      att_key => spec
-    }
+    pigeon[att_key] =  spec
   end
+  hash[name] = pigeon
   hash
 end
