@@ -2,8 +2,8 @@ def nyc_pigeon_organizer(data)
   pigeon_bois = {}
   names = []
   data.each do |att|
-    att.each do |spec|
-      names.concat(spec.values)
+    att.each_pair do |spec_key, spec_value|
+      names.concat(spec_value)
     end
   end
   names.uniq!
