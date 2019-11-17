@@ -10,6 +10,7 @@ def nyc_pigeon_organizer(data)
   names.each do |bird|
     pigeon_bois[bird] = attributes(data, bird)
   end
+  pigeon_bois
 end
 
 def attributes(data, name)
